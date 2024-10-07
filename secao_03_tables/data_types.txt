@@ -1,0 +1,31 @@
+Tipos de dados
+
+Podemos ter dados dos tipos: texto, data, número e espacial. Alguns dados também podem permitir limites a serem definidos, como quantidade máxima de caracteres.
+
+
+Tipos de dados de texto
+
+- CHAR(x): Aceita textos com 0 a 255 caracteres.
+- VARCHAR(x): Aceita textos com 0 a 65.535 caracteres.
+- TINYTEXT: Aceita texto com até 255 caracteres.
+- TEXT: Armazena texto com até 65.535 caracteres.
+- MEDIUMTEXT: Aceia texto com até 16.777.215 caracteres.
+
+Obs.: Com CHAR e VARCHAR, podemos especificar o número de caracteres para determinada coluna.
+
+
+Tipos de dados numéricos
+
+- BIT(x): Aceita de 1 a 64 caracteres.
+- TINYINT(x): Aceita de 1 a 255 caracteres.
+- BOOL: 0 é falso e outros valores considerados verdadeiros.
+- INT: Aceita valores entre -2.147.483.648 e 2.147.483.648.
+
+
+Tipos de dados de data
+
+- DATE: Aceita uma data no formato YYYY-MM-DD;
+- DATETIME: Aceita uma data com horário no formato YYYY-MM-DD hh:mm:sistema
+- TIMESTAMP: Aceita uma data no formato de DATETIME, porém convertida em um inteiro que representa a contagem em segundos da mesma.
+
+Obs.: As datas também devem ser inseridas entre aspas.

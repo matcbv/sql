@@ -1,0 +1,5 @@
+O que é uma tabela?
+
+Tabelas são entidades responsáveis por armazenar os dados do banco de dados.
+
+Elas possuem colunas, contendo diferentes tipos de dados, servindo com uma espécie de categoria para a tabela, e atributos, que definem o comportamento de cada coluna de determinada tabela.

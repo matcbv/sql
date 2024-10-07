@@ -1,0 +1,33 @@
+Para criarmos um banco de dados, devemos utilizar a querie:
+
+    CREATE DATABASE <database_name>;
+
+
+Já para excluí-los, usaremos a querie:
+
+    DROP DATABASE <database_name>;
+
+
+Podemos obter informações sobre os banco de dados em nosso sistema com:
+
+    SHOW DATABASES;
+
+
+Para alterarmos o banco de dados em que estamos trabalhando, utilizamos a querie:
+
+    USE <database_name>;
+
+
+Podemos rodar scripts SQL externos com o comando:
+
+    source database_file.sql
+
+
+Para importarmos dados diretamente em nossa interface gráfica em:
+
+    Server -> Data import -> Import from Disk
+
+
+Já para exportarmos dados, utilizamos o comando:
+
+    mysqldump -u root <database_name> > <file_name>.sql

@@ -1,0 +1,13 @@
+Cláusula WHERE
+
+Utilizando WHERE em nossas queries, conseguimos especificar quais valores serão afetados por elas. É de vital importância utilizá-lo em operações de atualização ou remoção no nosso banco de dados. 
+
+Ele deve ser utilizado ao final de nossa queries com uma condição a ser seguida: 
+
+    ... WHERE <condition>;
+
+Ex.:
+
+    UPDATE <table_name> SET <table_name=new_value>, ... WHERE ID = 1;
+
+No comando acima, o comando para atualizar nossa tabela só será aplicado para a coluna de ID igual a 1.
