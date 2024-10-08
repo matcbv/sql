@@ -1,0 +1,17 @@
+Operadores a serem utilizado com o SELECT
+
+Operadores de comparação:
+
+- > (Maior)
+- < (Menor)
+- >= (Maior ou igual)
+- <= (Menor ou igual)
+- = (Igual)
+
+BETWEEN: Seleciona valores entre um determinado intervalo.
+
+LIKE: Seleciona valores através de um padrão.
+
+IN: Seleciona valores contidos em um conjunto de valores.
+
+DISTINCT: Seleciona apenas valores únicos em uma consulta, elimindando todas as duplicatas.
