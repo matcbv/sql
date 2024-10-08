@@ -1,0 +1,11 @@
+Funções no SQL
+
+MIN - Com a função MIN, obtemos o menor valor contido em uma coluna. Ex.:
+
+    SELECT MIN(<column_name>) FROM <table_name>;
+
+MAX - Com a função MAX, obtemos o maior valor contido em uma coluna. Ex.:
+
+    SELECT MAX(<column_name>) FROM <table_name>;
+
+COUNT - Com a função COUNT, obtemos a contagem de valores contidos em determinada coluna.
