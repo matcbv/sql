@@ -2,6 +2,7 @@ Tipos de dados
 
 Podemos ter dados dos tipos: texto, data, número e espacial. Alguns dados também podem permitir limites a serem definidos, como quantidade máxima de caracteres.
 
+--------------- // ---------------
 
 Tipos de dados de texto
 
@@ -13,6 +14,7 @@ Tipos de dados de texto
 
 Obs.: Com CHAR e VARCHAR, podemos especificar o número de caracteres para determinada coluna.
 
+--------------- // ---------------
 
 Tipos de dados numéricos
 
@@ -21,6 +23,7 @@ Tipos de dados numéricos
 - BOOL: 0 é falso e outros valores considerados verdadeiros.
 - INT: Aceita valores entre -2.147.483.648 e 2.147.483.648.
 
+--------------- // ---------------
 
 Tipos de dados de data
 

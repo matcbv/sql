@@ -1,5 +1,6 @@
 Operadores a serem utilizado com o SELECT
 
+
 Operadores de comparação:
 
 - > (Maior)
@@ -8,10 +9,47 @@ Operadores de comparação:
 - <= (Menor ou igual)
 - = (Igual)
 
-BETWEEN: Seleciona valores entre um determinado intervalo.
+--------------- // ---------------
 
-LIKE: Seleciona valores através de um padrão.
+Operadores lógicos
 
-IN: Seleciona valores contidos em um conjunto de valores.
+AND: Recebe condições e retorna valores os quais atendem todas elas.
 
-DISTINCT: Seleciona apenas valores únicos em uma consulta, elimindando todas as duplicatas.
+OR: Recebe condições e retorna valores os quais atendem ao menos uma delas.
+
+NOT: Retorna valores os quais não atendam a condição recebida.
+
+Obs.: Podems utilizar os operadores && e || para substituir AND e OR, porém não é tão comum por não ser amplamente suportada.
+
+--------------- // ---------------
+
+BETWEEN: Retorna valores contidos em determinado intervalo. Ex.:
+
+    SELECT * FROM <table_name> WHERE <column_name> BETWEEN <value> AND <value>;
+
+
+LIKE: Retorna valores contidos em determinado padrão. Ex.:
+
+    SELECT * FROM <table_name> WHERE <column_name> LIKE <value>;
+
+
+IN: Retorna valores contidos em uma lista de valores. Ex.:
+
+    SELECT * FROM <table_name> WHERE <column_name> IN (<value1>, <value2>, ...);
+
+
+DISTINCT: Retorna apenas valores únicos em uma consulta, elimindando todas as duplicatas.
+
+    SELECT * FROM <table_name> WHERE <column_name> DISTINCT;
+
+
+ORDER BY: Ordena valores de acordo com colunas em forma ascendente (ASC) ou descendente (DESC). Ex.:
+
+    SELECT * FROM <table_name> ORDER BY <column_name> DESC;
+
+Obs.: Por padrão, a ordenação é feita de forma ascendente.
+
+
+LIMIT: Limita o número de resultados em determinado inteiro. Ex.:
+
+    SELECT <column_name> FROM <table_name> LIMIT <integer>;

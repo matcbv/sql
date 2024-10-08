@@ -8,6 +8,7 @@ Para selecionar colunas específicas, utilizamos a querie:
 
     SELECT <column_name>, ... FROM <table_name>;
 
+--------------- // ---------------
 
 Inserir dados
 
@@ -19,6 +20,7 @@ Obs.: Caso inserirmos dados em todas as colunas da tabela em questão, não é n
 
     INSERT INTO <table_name> VALUES (<value>, ...);
 
+--------------- // ---------------
 
 Atualizar dados
 
@@ -28,6 +30,7 @@ Para atualizarmos dados da tabela, utilizamos a querie:
 
 Obs.: Lembre-se de utilizar o WHERE, mesmo que não obrigatório.
 
+--------------- // ---------------
 
 Deletar dados
 
