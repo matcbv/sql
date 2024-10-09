@@ -1,0 +1,26 @@
+AS - Com o AS, criamos um ALIAS para determinada coluna em nossa tabela. Ex.:
+
+	SELECT <column_name> AS <new_name> FROM <table_name>;
+
+Obs.: Podemos também adicionar uma string como alias. Ex.:
+
+	SELECT <column_name> AS "String Personalizada" FROM <table_name>;
+
+
+
+Constraints
+
+Constraints são regras que determinam como será feito o preenchimento das células de uma tabela. São responsáveis por organizar e padronizar nosso projeto.
+
+
+NOT NULL - Faz com que determinada coluna não aceite valores nulos. Ex.:
+	
+	CREATE TABLE <table_name> (<column_name> <data_type> NOT NULL) VALUES (<value>);
+
+Obs.: Uma string vazia não é considerada nula pelo SQL. Para indicarmos um valor nulo, devemos utilizar a palavra-chave NULL ou omitir determinado valor ao inserir dados na tabela.
+
+
+UNIQUE - Faz com que os valores de determinada coluna sejam únicos. Ex.:
+
+	CREATE TABLE <table_name> (<column_name> <data_type> UNIQUE) VALUES (<value>);
+
