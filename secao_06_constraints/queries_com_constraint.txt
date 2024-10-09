@@ -29,3 +29,13 @@ PRIMARY KEY - Faz com que determinada coluna contenha os ID's de determinada tab
 AUTO INCREMENT - Faz com que determinada coluna seja autoincrementável. É muito utilizado com PRIMARY KEY, para gerar diferentes ID's para cada produto. Ex.:
 
 	CREATE TABLE <table_name> (id INT PRIMARY KEY AUTO INCREMENT) VALUES (<value>);
+
+
+FOREIGN KEY - Faz a ligação de uma tabela a outra através de uma chave primária. Através dela, também conseguimos impedir a remoção de dados com ligação em outras tabelas. Ex.:
+
+	CREATE TABLE <table_name> (id INT PRIMARY KEY AUTO_INCREMENT, <column_name> <data_type>, <main_table>_id INT FOREIGN KEY (<main_table>)) VALUES (<values>, ...);
+
+Obs.: Só é possível adicionar uma chave estrangeira de valor já existente na tabela primária. Já para remover uma tabela primária, devemos remover antes a tabela estrangeira, que possui dados ligados a ela.
+
+
+INDEX - Com 
