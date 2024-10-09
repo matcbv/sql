@@ -1,13 +1,3 @@
-AS - Com o AS, criamos um ALIAS para determinada coluna em nossa tabela. Ex.:
-
-	SELECT <column_name> AS <new_name> FROM <table_name>;
-
-Obs.: Podemos também adicionar uma string como alias. Ex.:
-
-	SELECT <column_name> AS "String Personalizada" FROM <table_name>;
-
-
-
 Constraints
 
 Constraints são regras que determinam como será feito o preenchimento das células de uma tabela. São responsáveis por organizar e padronizar nosso projeto.
@@ -24,3 +14,18 @@ UNIQUE - Faz com que os valores de determinada coluna sejam únicos. Ex.:
 
 	CREATE TABLE <table_name> (<column_name> <data_type> UNIQUE) VALUES (<value>);
 
+
+PRIMARY KEY - Faz com que determinada coluna contenha os ID's de determinada tabela.
+
+	CREATE TABLE <table_name> (id INT PRIMARY KEY) VALUES (<value>);
+
+	Outra opção é:
+
+	CREATE TABLE <table_name> (id INT, <column_name> <data_type>, PRIMARY KEY (id)) VALUES (<value>);
+
+	Obs.: A coluna de ID não aceita valores nulos ou duplicados.
+
+
+AUTO INCREMENT - Faz com que determinada coluna seja autoincrementável. É muito utilizado com PRIMARY KEY, para gerar diferentes ID's para cada produto. Ex.:
+
+	CREATE TABLE <table_name> (id INT PRIMARY KEY AUTO INCREMENT) VALUES (<value>);

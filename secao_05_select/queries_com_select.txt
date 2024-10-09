@@ -23,6 +23,16 @@ Obs.: Podems utilizar os operadores && e || para substituir AND e OR, porém nã
 
 --------------- // ---------------
 
+AS - Com o AS, criamos um ALIAS para determinada coluna em nossa tabela. Ex.:
+
+	SELECT <column_name> AS <new_name> FROM <table_name>;
+
+Obs.: Podemos também adicionar uma string como alias. Ex.:
+
+	SELECT <column_name> AS "String Personalizada" FROM <table_name>;
+
+--------------- // ---------------
+
 BETWEEN: Retorna valores contidos em determinado intervalo. Ex.:
 
     SELECT * FROM <table_name> WHERE <column_name> BETWEEN <value> AND <value>;
