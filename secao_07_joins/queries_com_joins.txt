@@ -35,4 +35,4 @@ Para utilizarmos mais de uma tabela no JOIN, basta utilizarmos JOIN's concatenad
     INNER JOIN <second_table>
     ON <first_table>.<primary_key> = <second_table>.<stranger_key>
     INNER JOIN <third_table>
-    ON <first_table>.<primary_key> = <third_table>.<stranger_key>;
+    ON <first/second_table>.<primary_key> = <third_table>.<stranger_key>;
