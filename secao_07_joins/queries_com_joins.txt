@@ -1,0 +1,5 @@
+Joins
+
+Joins são consultas que abrangem mais de uma tabela, onde na maioria das vezes, possuem ligações entre si. Como resultado, obtemos consultas mais completas, sendo de grande importância em diversos casos. Ex.:
+
+    SELECT <primary_table_name>.<column_name> <stranger_table>.<column_name> FROM <primary_table> INNER JOIN <stranger_table> ON <primary_key> = <stranger_key>;

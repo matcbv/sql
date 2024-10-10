@@ -33,9 +33,19 @@ AUTO INCREMENT - Faz com que determinada coluna seja autoincrementável. É muit
 
 FOREIGN KEY - Faz a ligação de uma tabela a outra através de uma chave primária. Através dela, também conseguimos impedir a remoção de dados com ligação em outras tabelas. Ex.:
 
-	CREATE TABLE <table_name> (id INT PRIMARY KEY AUTO_INCREMENT, <column_name> <data_type>, <main_table>_id INT FOREIGN KEY (<main_table>)) VALUES (<values>, ...);
+	CREATE TABLE <table_name> (id INT PRIMARY KEY AUTO_INCREMENT, <column_name> <data_type>, <primary_table>_id INT FOREIGN KEY (<primary_table>)) VALUES (<values>, ...);
 
-Obs.: Só é possível adicionar uma chave estrangeira de valor já existente na tabela primária. Já para remover uma tabela primária, devemos remover antes a tabela estrangeira, que possui dados ligados a ela.
+Obs.: Só é possível adicionar uma chave estrangeira de valor já existente na tabela primária. Já para remover uma tabela primária, devemos remover antes a tabela estrangeira que possui dados ligados a ela.
 
 
-INDEX - Com 
+INDEX - Faz com que determinada coluna seja consultada primeiro que as anteriores. A função do INDEX tem efeito ao ser utilizado junto do WHERE. Ex.:
+
+	CREATE INDEX <index_name> ON <table_name>(<column_name>);
+
+	Obs.: Toda PRIMARY KEY é um INDEX.
+
+Para removermos um INDEX de uma coluna, utilizamos a querie:
+
+	DROP INDEX <index_name> ON <table_name>;
+
+	Obs.: Para excluir nosso INDEX, devemos utilizar o nome escolhido em sua criação (<index_name>);
