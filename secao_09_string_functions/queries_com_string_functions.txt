@@ -1,0 +1,13 @@
+CHAR_LENGTH - Com CHAR_LENGTH, obtemos o número de caracteres das strings contidas nas colunas das nossas tabelas. Ex.:
+
+    SELECT <column_name>, CHAR_LENGTH(<column_name>) AS char_length FROM <table_name>;
+
+
+CONCAT - Com CONCAT, conseguimos concatenar duas ou mais strings contidas nas colunas das nossas tabelas. No final, uma única string é retornada como resultado. Ex.:
+
+    SELECT CONCAT("Essa", <string>, "e essa", <string>, "serão concatenadas") AS concat_string FROM <table_name>
+
+
+CONCAT_WS - Com CONCAT_WS, conseguimos definir qual o separador a ser utilizado pela função. Para isso, passamos o separador como primerio parâmetro para a função. Ex.:
+
+    
