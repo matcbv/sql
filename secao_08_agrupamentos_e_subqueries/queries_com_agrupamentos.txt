@@ -1,0 +1,42 @@
+Agrupamentos
+
+UNION - Com UNION, obtemos um agrupamento sem linhas duplicadas entre duas colunas. Podemos concatenar quantos UNION's quisermos em nossa querie:
+
+    SELECT <column_name> FROM <table_name> UNION SELECT <column_name> FROM <table_name>;
+
+Obs.: Podemos realizar mais de uma união em nossa tabela, basta utilizar mais um UNION ao final da querie. Ex.:
+
+    SELECT <column_name> FROM <table_name> UNION SELECT <column_name> FROM <table_name> UNION ...;
+
+
+UNION ALL - Com UNION ALL, obtemos um agrupamento entre duas colunas, porém mantendo as linhas duplicadas. Ex.:
+
+    SELECT <column_name> FROM <table_name> UNION ALL SELECT <column_name> FROM <table_name>;
+
+
+GROUP BY - Com GROUP BY, conseguimos dividir os resultados em grupos para que funções de agregação, como COUNT, SUM ou AVG, sejam aplicadas de forma grupal ao invés de global.
+    
+    SELECT <column_name> COUNT(<column_name>) FROM <table_name> GROUP BY <column_name>;
+
+
+HAVING - Com HAVING, realizmos a mesma filtragem realizada com o WHERE, mas esse, é utilizado com o resultado de funções agregadas. Ex.:
+
+    SELECT <column_name> COUNT(<column_name>) FROM <table_name>
+    GROUP BY <column_name>
+    HAVING <condition>;
+
+
+EXISTS - Com EXISTS, conseguimos validar se certa subquerie é válida, ou seja, se a consulta retornar ao menos uma linha. Geralmente é utilizado junto com WHERE. Ex.:
+
+    SELECT <column_name> FROM <table_name>
+    WHERE EXISTS (SELECT 1 FROM <table_name> WHERE <condition>)
+
+Obs.: Com SELECT 1, estaremos indicando ao SQL que não há necessidade de buscar todas as colunas da tabela. O banco de dados pode simplesmente verificar se existem linhas que atendem à condição e retornar 1 como um placeholder.
+
+
+ANY - Sendo muito semelhante ao EXISTS, o ANY verifica se algum valor da subconsulta corresponde à condição da comparação com o WHERE. Ex.:
+
+    SELECT <column_name> FROM <table_name>
+    WHERE <value> =/>/< ANY (SELECT <column_name> FROM <table_name>)
+
+Obs.: Diferentemente de EXISTS, conseguimos realizar comparações de valores (como =, >, <) diretamente entre a consulta principal e os resultados da subconsulta

@@ -1,0 +1,15 @@
+Subquerie
+
+Subqueries são queries dentro de outras queries, responsáveis por realizar uma consulta a parte. Ex.:
+
+    SELECT <column_name>, (SELECT <column_name> FROM <table_name> WHERE <condition>) FROM <table_name>;
+
+
+Podemos estar adicionando comentário em nosso MySQL Workbench. Ex.:
+
+    -- Comentário de uma só linha.
+
+    /*
+        Comentário com mais
+        de uma linha.
+    */
