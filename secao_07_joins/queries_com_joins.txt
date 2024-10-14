@@ -2,6 +2,7 @@ Joins
 
 Joins são consultas que abrangem mais de uma tabela, onde na maioria das vezes, possuem ligações entre si. Como resultado, obtemos consultas mais completas, sendo de grande importância em diversos casos.
 
+
 INNER JOIN - Combina as linhas que têm correspondências em ambas as tabelas. Se não houver correspondência, a linha é excluída do resultado. Ex.:
 
     SELECT <primary_table_name>.<column_name> <stranger_table>.<column_name>
@@ -9,7 +10,10 @@ INNER JOIN - Combina as linhas que têm correspondências em ambas as tabelas. S
     INNER JOIN <stranger_table>
     ON <primary_table>.<primary_key> = <stranger_table>.<stranger_key>;
 
-Obs.: A coluna que iremos utilizar no FROM será nossa tabela que contém os registros principais que desejamos ver, mesmo que não haja correspondências na outra tabela. Já a utilizada com nossos JOINS, será a tabela complementar, onde serão feitas as consultas com relação à tabela principal (Tabela do FROM).
+A coluna que iremos utilizar no FROM será nossa tabela que contém os registros principais que desejamos ver, mesmo que não haja correspondências na outra tabela. Já a utilizada com nossos JOINS, será a tabela complementar, onde serão feitas as consultas com relação à tabela principal (Tabela do FROM).
+
+Obs.: Ao utilizar somente JOIN, o MySQL interpretará com um INNER JOIN.
+
 
 LEFT JOIN - Retorna todos as linhas da tabela da esquerda (primeira tabela), mesmo que não haja correspondência na tabela da direita.
 
@@ -17,6 +21,7 @@ LEFT JOIN - Retorna todos as linhas da tabela da esquerda (primeira tabela), mes
     FROM <first_table>
     LEFT JOIN <second_table>
     ON <first_table>.<primary_key> = <second_table>.<stranger_key>;
+
 
 RIGHT JOIN - Retorna todos as linhas da tabela da direita (segunda tabela), mesmo que não haja correspondência na tabela da direita.
 

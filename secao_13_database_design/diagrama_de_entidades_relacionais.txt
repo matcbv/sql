@@ -1,0 +1,5 @@
+Diagrama de Entidades Relacionais (DER)
+
+O DER é um quadro onde estarão contidas as tabelas e as relações entre si, implementanto uma forma visual para o banco de dados.
+
+Nele, as tabelas terão seus nomes informados, assim como o nome de suas colunas e seus tipos de dados.

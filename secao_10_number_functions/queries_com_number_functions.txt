@@ -1,0 +1,31 @@
+CEIL - Com CEIL, conseguimos arredondar um valor númerico para cima como um inteiro. Ex.:
+
+    SELECT CEIL(<column_name>) FROM <table_name>;
+
+
+FLOOR - Com FLOOR, conseguimos arredondar nossos números para baixo como um inteiro. Ex.:
+
+    SELECT FLOOR(<column_name>) FROM <table_name>;
+
+
+COUNT - Com COUNT, conseguimos obter o número de ocorrências de determinada coluna.
+
+    SELECT COUNT(<column_name>) FROM <table_name>;
+
+
+MAX - Com a função MAX, obtemos o maior valor contido em uma coluna. Ex.:
+
+    SELECT MAX(<column_name>) FROM <table_name>;
+
+
+MIN - Com a função MIN, obtemos o menor valor contido em uma coluna. Ex.:
+
+    SELECT MIN(<column_name>) FROM <table_name>;
+
+
+Obs.: Utilizando MIN e MAX com valores não númericos, os organizará em ordem alfabética.
+
+
+SUM - Com SUM, obtemos o somatório de todos os valores numéricos contidos em determinada coluna. Ex.:
+
+    SELECT SUM(<column_name>) FROM <table_name>;

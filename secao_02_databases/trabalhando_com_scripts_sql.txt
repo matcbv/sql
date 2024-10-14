@@ -1,0 +1,13 @@
+Podemos rodar scripts SQL externos com o comando:
+
+    source database_file.sql
+
+
+Para importarmos dados diretamente em nossa interface gráfica em:
+
+    Server -> Data import -> Import from Disk
+
+
+Já para exportarmos dados, utilizamos o comando:
+
+    mysqldump -u root <database_name> > <file_name>.sql

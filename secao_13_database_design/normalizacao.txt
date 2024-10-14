@@ -1,0 +1,9 @@
+A normalização é uma série de regras a serem aplicadas em nosso banco de dados buscando sempre a boa prática e consistência do mesmo.
+
+- Como primeiro passo, iremos sempre fazer uso da chave primária em todas as nossas tabelas, visando antecipar futurar alterações necessárias no banco de dados.
+
+- 1FN: Colunas devem guardar um único valor.
+
+- 2FN: Colunas que não pertencem ao tópico da tabela devem ser inseridos em uma nova tabela.
+
+- 3FN: As tabelas devem conter apenas dados independentes, ou seja, cujo resultado não dependa de nenhum outro. Caso contrário, devemos tratar tais dados em outra camadas da nossa aplicação.

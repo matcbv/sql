@@ -1,0 +1,4 @@
+Ao trabalharmos com banco de dados, é uma boa prática que seja feita uma documentação para banco. Nele, estarão contidas as entidades do banco, demonstrando as relações entre elas, e uma prévia de seu funcionamento. Isso é de grande ajuda para manter a organização e prever possíveis falhas de operação.
+
+Nesse processo, também é feita uma troca de ideias com pessoas de fora da área que farão uso do sistema. Com base nisso, podemos encontrar dificuldade técnicas que haverão de ser conciliadas com o cliente.
+

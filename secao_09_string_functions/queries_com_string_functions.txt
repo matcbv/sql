@@ -1,13 +1,57 @@
-CHAR_LENGTH - Com CHAR_LENGTH, obtemos o número de caracteres das strings contidas nas colunas das nossas tabelas. Ex.:
+CHAR_LENGTH - Com CHAR_LENGTH, conseguimos obter o número de caracteres que uma string possui. Ex.:
 
     SELECT <column_name>, CHAR_LENGTH(<column_name>) AS char_length FROM <table_name>;
 
 
-CONCAT - Com CONCAT, conseguimos concatenar duas ou mais strings contidas nas colunas das nossas tabelas. No final, uma única string é retornada como resultado. Ex.:
+CONCAT - Com CONCAT, conseguimos concatenar duas ou mais strings, retornando uma única como resultado. Ex.:
 
     SELECT CONCAT("Essa", <string>, "e essa", <string>, "serão concatenadas") AS concat_string FROM <table_name>
 
 
-CONCAT_WS - Com CONCAT_WS, conseguimos definir qual o separador a ser utilizado pela função. Para isso, passamos o separador como primerio parâmetro para a função. Ex.:
+CONCAT_WS - Com CONCAT_WS, conseguimos definir qual o separador a ser utilizado pela função. Para isso, passamos o separador como primerio argumento para a função. Ex.:
 
-    
+    SELECT CONCAT_WS("-", "Essa", <string>, "e essa", <string>, "serão concatenadas com - como separador") AS concat_string FROM <table_name>;
+
+
+FORMAT - Com FORMAT, conseguimos definir o número de casas decimais que um valor númerico terá. Ex.:
+
+    SELECT FORMAT(<column_name>) FROM <table_name>;
+
+Obs.: O número será automaticamente arredondado para se adaptar à quantidade de casas decimais definidas.
+
+
+INSTR - Com INSTR, conseguimos obter a posição em que determinada string está contida dentro de outra string. Ex.:
+
+    SELECT INSTR(<column_name>, 'valor');
+
+Obs.: Caso determinada string não exista no conteúdo da outra, o valor 0 será retornado.
+
+
+LCASE - Com LCASE, conseguimos converter uma string para letras minúsculas. Ex.:
+
+    SELECT LCASE(<column_name>) FROM <table_name>;
+
+
+UCASE - Com UCASE, conseguimos converter uma string para letras maiúsculas. Ex.:
+
+    SELECT UCASE(<column_name>) FROM <table_name>;
+
+
+LEFT - Com LEFT, conseguimos extrair uma fatia de uma string especificando o índice como segundo argumento. O fatiamento é feito da esquerda para a direita. Ex.:
+
+    SELECT LEFT(<column_name>, <integer>) FROM <table_name>;
+
+
+RIGTH - Com a mesma função de left, sua única diferença é que o fatiamento é iniciado na direito ao invés da esquerda. Ex.:
+
+    SELECT LEFT(<column_name>, <integer>) FROM <table_name>;
+
+
+REPLACE - Com REPLACE, conseguimos substituir parte de determinada string por outra string de nossa escolha.
+
+    SELECT REPLACE(<column_name>, 'valor', 'novo valor'); 
+
+
+SUBSTR - Com SUBSTR, conseguimos obter uma string através de dois argumentos passados por parâmetro.
+
+    SELECT SUBSTR(<column_name>, <start_integer>, <end_integer>) FROM <table_name>;

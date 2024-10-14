@@ -4,7 +4,7 @@ Podemos selecionar todos os dados de uma tabela com a querie:
 
     SELECT * FROM <table_name>;
 
-Obs.: Também podemos especificar o bando de dados em que a tabela pertence através da notação de ponto:
+Obs.: Também podemos especificar o banco de dados em que a tabela pertence através da notação de ponto:
 
     SELECT * FROM <database_name>.<table_name>;
 
@@ -13,7 +13,7 @@ Para criarmos uma tabela, utilizamos a querie a seguir:
 
     CREATE TABLE <table_name> (<column_name> <data_type>, ...);
 
-Obs.: Podemos criar mais de uma coluna separando-a por vírgula em nossa querie.
+Obs.: Podemos criar mais de uma coluna separando-as por vírgulas em nossa querie.
 
 
 Para excluiros uma tabela, utilizamos a mesma querie vista anteriormente com o banco de dados:

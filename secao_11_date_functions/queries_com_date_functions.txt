@@ -1,0 +1,56 @@
+ADDDATE - Com ADDDATE, conseguimos adicionar ou remover determinada quantia de tempo de nossa data. Ex.:
+
+    SELECT ADDDATE(<column_name>, INTERVAL <date>) FROM <table_name>;
+
+Obs.: O valor do argumento date, junto de interval, deve ser utilizado no formato: <integer> <time_unit>. Ex.:
+
+    - 5 DAYS
+    - -3 WEEKS
+    - 4 YEAR
+
+
+ADDTIME - Muito parecido com ADDDATE, porém focado em trabalhar com medidas de horário. Ex.:
+
+    SELECT ADDTIME(<column_name>, "hh:mm:ss") FROM <table_name>;
+
+
+DATEDIFF - Com DATEDIFF, conseguimos obter a diferença de tempo entre duas datas. Ex.:
+
+    SELECT DATEDIFF(<date_one>, <date_two>) FROM <table_name>;
+
+
+DATE_FORMAT - Com DATE_FORMAT, conseguimos formatar uma data com um padrão de nossa escolha. Ex.:
+
+    SELECT DATE_FORMAT(<column_name>, "format_string") FROM <table_name>;
+
+    Obs.: Para obter o formato da nossa data padrão, utilizamos "%d/%m/%Y"
+
+
+DAY - Com DAY, conseguimos obter o dia de determinada data. Ex.:
+
+    SELECT DAY(<column_name>) AS dia FROM <table_name>;
+
+
+MONTH - Com MONTH, conseguimos obter o mês de determinada data. Ex:
+
+    SELECT MONTH(<column_name>) as mes FROM <table_name>;
+
+
+YEAR - Com YEAR, conseguimos obter o ano de determinada data. Ex.:
+
+    SELECT YEAR(<column_name>) as ano FROM <table_name>;
+
+
+DAYOFWEEK - Com DAYOFWEEK, conseguimos obter o respectivo dia da semana que uma data pertence. O resultado varia de 1 (Doming) à 7 (Sábado). Ex.:
+
+    SELECT DAYOFWEEK(<column_name>) AS dia_da_semana FROM <table_name>;
+
+
+DAYOFYEAR - Com DAYOFYEAR, conseguimos obter o respectivo dia do ano que uma data pertence. O resultado varia de 1 à 365. Ex.:
+
+    SELECT DAYOFYEAR(<column_name>) AS dia_do_ano FROM <table_name>;
+
+
+WEEKOFYEAR - Com WEEKOFYEAR, conseguimos obter a respectiva semana do ano que uma data pertence. O resultado varia de 1 a 42. Ex.:
+
+    SELECT WEEKOFYEAR(<column_name>) AS semana_do_ano FROM <table_name>;

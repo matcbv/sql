@@ -1,0 +1,23 @@
+One to One - Com esse relacionamento, teremos apenas um registro ligado a outro. Isso ocorre quando uma table possui um único relacionamento com outra. Ex.:
+
+Ao simular um banco de dados de uma empresa, teremos uma tabela para funcionários e uma para seus dados. Cada funcionário terá dados exclusivos, assim como os dados pertencem a um único funcionário.
+
+One to Many - Com esse relacionamento, teremos um registro ligados as vários outros. Isso ocorre quando uma tabela possui mais de um relacionamento com outra, mas não o inverso. Ex.:
+
+Ao simular um banco de dados de um e-commerce, teremos uma tabela para os clintes e uma para os pedidos. Um cliente pode possuir vários pedidos, mas um pedido pertence a somente um cliente.
+
+Many to Many - Com esse relacionamento, teremos um registro ligado a vários outros e vice-versa. Isso ocorre quando duas tabelas possuem mais de uma ligação entre si. Em Many to Many, temos as chamadas tabelas pivô, responsáveis por armazenar as chaves estrangeiras para realizar as ligações entre as tabelas. Ex.:
+
+Ao simular um banco de dados de uma escola, teremos uma tabela para professores e uma para alunos. Dessa forma, assim como um professor possui mais de um aluno, um aluno possui mais de um professor, formando assim, uma relação Many to Many entre tabelas.
+
+Tabela pivô:
+
+    CREATE TABLE <pivot_table> (
+        <first_id> INT,
+        <second_id> INT,
+        PRIMARY KEY (<first_id>, <second_id>),
+        FOREIGN KEY (<first_id>) REFERENCES <first_table>(id),
+        FOREIGN KEY (<second_id>) REFERENCES <second_table>(id)
+    );
+
+Obs.: Definimos os ID's como chaves primárias compostas para que não hajam pares de chaves repetidos.
