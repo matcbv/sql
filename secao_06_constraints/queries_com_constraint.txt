@@ -33,7 +33,12 @@ AUTO INCREMENT - Faz com que determinada coluna seja autoincrementável. É muit
 
 FOREIGN KEY - Faz a ligação de uma tabela a outra através de uma chave primária. Através dela, também conseguimos impedir a remoção de dados com ligação em outras tabelas. Ex.:
 
-	CREATE TABLE <table_name> (id INT PRIMARY KEY AUTO_INCREMENT, <column_name> <data_type>, <primary_table>_id INT FOREIGN KEY (<primary_table>)) VALUES (<values>, ...);
+	CREATE TABLE <table_name> (
+		id INT PRIMARY KEY AUTO_INCREMENT,
+		CONSTRAINT dk_<primary_table> FOREIGN KEY <primary_table>_id INT FOREIGN KEY (<primary_table>)
+	) VALUES (<values>, ...);
+
+Com a palavra-chave CONSTRAINT, conseguimos definir um nome para nossa restrição, facilitando a manutenção em nosso banco de dados.
 
 Obs.: Só é possível adicionar uma chave estrangeira de valor já existente na tabela primária. Já para remover uma tabela primária, devemos remover antes a tabela estrangeira que possui dados ligados a ela.
 
