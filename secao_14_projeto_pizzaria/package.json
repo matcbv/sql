@@ -1,0 +1,20 @@
+{
+  "name": "secao_14_projeto_pizzaria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "postman": "^0.2.0",
+    "tailwindcss": "^3.4.14",
+    "webpack": "^5.95.0"
+  }
+}
