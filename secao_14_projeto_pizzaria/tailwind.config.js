@@ -1,12 +1,11 @@
-const path = require("path")
-
-/** @type {import("tailwindcss").Config} */
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["src/views/**/*.html"],
+    content: ['**/*.ejs'],
     theme: {
-        extend: {
-            
+        extend:{
+            maxWidth: {
+                "100": "100vw"
+            }
         }
     },
     corePlugins: {

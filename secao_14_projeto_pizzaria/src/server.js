@@ -1,29 +1,20 @@
-require("dotenv").config();
+const path = require('path');
 
-const session = require("express-session");
-const express = require("express");
+const env = require('dotenv');
+env.config();
+
+const express = require('express');
 
 const app = express();
 
-function secretGenerator() {
-    let secret = "";
-    for (let i; i=0; i >= 24) {secret += String.fromCharCode(Math.random() * 94 + 32)};
-    console.log(secret)
-    return secret;
-}
-
 app.use(express.urlencoded({extended: true}));
+app.use(express.json())
+app.use(express.static(path.resolve(__dirname, '..', 'frontend')))
 
-app.use(session({
-    secret: secretGenerator(),
-    cookie: {
-        httpOnly: true,
-        maxAge: 60 * 60 * 24 * 7 // 7 dias
-    },
-    saveUninitialized: false,
-    resave: false
-}));
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, 'views'));
 
-app.listen(process.env.SERVER_PORT, () => {
-    console.log('Servidor escutando na porta', process.env.SERVER_PORT)
-})
+const router = require(path.resolve(__dirname, 'routes.js'));
+app.use(router);
+
+app.listen(process.env.SERVER_PORT, () => console.log('Servidor escutando na porta', process.env.SERVER_PORT));

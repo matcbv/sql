@@ -2,19 +2,25 @@
   "name": "secao_14_projeto_pizzaria",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon --config nodemon.json",
+    "tw": "npx tailwind -i frontend/css/tailwind/input.css -o frontend/css/tailwind/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "express-session": "^1.18.1",
-    "postman": "^0.2.0",
-    "tailwindcss": "^3.4.14",
-    "webpack": "^5.95.0"
+    "mysql2": "^3.11.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "date-fns": "^4.1.0",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
   }
 }
