@@ -1,4 +1,3 @@
-
 const mysql = require('mysql2');
 
 // Métodos do pacote mysql2
@@ -26,9 +25,11 @@ const poolConnection = mysql.createPool({
     database: process.env.DB_NAME,
     connectionLimit: 10, // Com connectionList, definimos o número máximo de conexões simultâneas aceitas pelo pool. O valor padrão é 10.
     queueLimit: 0, // Com queueLimit, definimos o número máximo de requisições a serem colocadas na fila de espera. O valor padrão é 0.
-    acquireTimeout: 10000, // Com acquireTimeout, definimos o tempo limite em que uma requisição ficará na fila de espera. Caso ultrapassado, um erro será levantado. O valor padrão é 10000 (10 segundos).
+    connectTimeout: 10000, // Com connectTimeout, definimos o tempo limite de espera para a conexão com o banco de dados. Caso ultrapassado, um erro será levantado. O valor padrão é 10000 (10 segundos).
     idleTimeout: 30000 // Com idleTimeout, dedinimos o tempo limite em que uma conexão ociosa se mantém ativa. Caso ultrapassado, a conexão é encerrada. Não há valor padrão.
 });
+
+// Ao final, veremos um exemplo de consulta utilizando a conexão pool.
 
 // ---------- query() ----------
 
@@ -65,15 +66,26 @@ async function fetchData() {
     } catch (error) {
         console.error('Erro ao consultar o banco de dados', error);
     }
+    promiseConnection.end();
 };
 
 fetchData();
 
-// ---------- end() ----------
+// ---------- end() e release() ----------
 
-// Encerra uma conexão ativa com o banco de dados.
+// Com end, conseguimos encerrar uma conexão ativa com o banco de dados. Devemos utilizá-la após uma operação através do método createConnection().
 
-connection.end();
+// Já com createPool(), utilizaremos o método release(), responsável por liberar uma conexão para o pool de conexões disponíveis do banco de dados.
 
-// ---------- getConnection() ----------
+// ---------- Exemplo de consulta com poolConnection ----------
+
+poolConnection.getConnection((err, connection) => {
+    if(err){
+        console.log('Erro ao obter conexão com o pool do banco de dados', err);
+    } else{
+        const result = connection.query('SELECT nome FROM contas WHERE saldo >= 2000');
+        console.log(result);
+        connection.release();
+    }
+});
 

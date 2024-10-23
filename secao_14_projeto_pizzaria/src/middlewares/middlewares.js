@@ -36,7 +36,6 @@ const middlewares = {
     },
 
     delAccount: (req, res, next) => {
-        dbConnection.
         dbConnection.query('DELETE FROM contas WHERE cpf = ?;', [req.body[2]], (error, result) => {
             if (error){
                 console.log('Erro ao remover conta', error);
