@@ -1,0 +1,67 @@
+--------------- Palavras-chave para procedures ---------------
+
+- CREATE PROCEDURE: Responsável pro criar uma procedure ao passarmos o nome dela junto de seus parâmetros, caso existentes.
+- IN: Especifica o parâmetro como tipo de entrada, onde um valor será inserido para ser utilizado em nossa querie.
+- OUT: Especifica o parâmetro como do tipo de saída, onde um valor será preenchido pela querie, podendo ser utilizado externamente.
+- INOUT: Combina os dois tipo (IN e OUT), sendo um valor de entrada que poderá ser alterado pela querie para então ser utilizado.
+- BEGIN: Indica o início da store procedure.
+- END: Indica o final da store procedure.
+- CALL: Responsável por chamar nossa store procedure para uso.
+
+--------------- Criando uma procedure ---------------
+
+Para criarmos uma procedure, devemos iniciar e finalizar nossa querie com as palavras-chave BEGIN e END, respectivamente. Ex.:
+
+    DELIMITER $$
+    CREATE PROCEDURE procedureName() // O nome da procedure (Camel Case por padrão), junto dos parâmetros a serem utilizados, caso existentes.
+    BEGIN
+        QUERY; // A query a ser salva na procedure.
+    END$$
+
+Obs.: O fato de mudarmos o delimitador é devido a querie sendo salva. Caso o delimitador seja o mesmo, a querie seria executada antes do fim da procedure.
+
+
+--------------- Criando uma procedure parametrizada ---------------
+
+Para criarmos uma procedure com parametrizada, devemos informar os parâmetros a serem utilizados em sua criação. Ex.:
+
+    DELIMITER $$
+    CREATE PROCEDURE procedureName(
+        IN/OUT/INOUT param_one data_type, ...
+    )
+    BEGIN
+        QUERY;
+    END$$
+
+No caso de utilizarmos parâmetros de saída, devemos utilizar, nas chamadas de nossa procedure, as user-defined variables. Com elas, conseguimos armazenar o valor resultante de nossa procedure para ser utilizada a qualquer momento. Ex.:
+
+CALL procedureName(@varName);
+SELECT @varName; // Exibindo o valor obtido na chamada da procedure.
+
+
+--------------- Listar procedures ---------------
+
+Para que todas as procedures criadas sejam exibidas, utilizamos a querie:
+
+    SHOW PROCEDURE STATUS
+
+Também podemos filtras as procedures criadas para um banco de dados em específico:
+
+    SHOW PROCEDURE STATUS WHERE Db = 'database_name'
+
+
+--------------- Deletar procedures ---------------
+
+Para deletarmos uma procedure, utilizamos a querie:
+
+    DROP PROCEDURE procedureName;
+
+
+--------------- Detalhar procedures ---------------
+
+Para verificarmos nossas procedures detalhadamente, utilizamos a querie:
+
+    SHOW CREATE PROCEDURE procedureName;
+
+Com esse comando, conseguimos ver mais informações sobre nossas procedures, como a querie que foi salva nela.
+

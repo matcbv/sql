@@ -1,5 +1,6 @@
-const dbConnection = require('../db');
+const {dbConnection} = require('../db');
 const datefns = require('date-fns');
+
 
 const middlewares = {
     home: (req, res) => {
@@ -8,7 +9,7 @@ const middlewares = {
 
     getAccounts: async (req, res) => {
         // Através da conexão criada em nosso arquivo db.js, conseguimos realizar consultas em nosso banco de dados através do método query().
-        const result = (await (dbConnection.query('SELECT * FROM contas;'))).shift();
+        const result = (await dbConnection.query('SELECT * FROM contas;')).shift();
         res.render('accounts', { result });
     },
 

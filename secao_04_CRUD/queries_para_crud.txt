@@ -1,4 +1,4 @@
-Selecionar dados
+--------------- Selecionar dados ---------------
 
 Podemos selecionar todas as colunas de nossa tabela com a querie:
 
@@ -8,34 +8,31 @@ Para selecionar colunas específicas, utilizamos a querie:
 
     SELECT <column_name>, ... FROM <table_name>;
 
---------------- // ---------------
 
-Inserir dados
+--------------- Inserir dados ---------------
 
 Para inserirmos dados na tabela, utilizamos a querie:
 
-    INSERT INTO <table_name> (<column_name> ...) VALUES (<value>, ...);
+    INSERT INTO <table_name> (<column_name>, ...) VALUES (<value>, ...);
 
 Obs.: Caso inserirmos dados em todas as colunas da tabela em questão, não é necessário especificar o nome das colunas na querie. Ex.:
 
     INSERT INTO <table_name> VALUES (<value>, ...);
 
---------------- // ---------------
 
-Atualizar dados
+--------------- Atualizar dados ---------------
 
 Para atualizarmos dados da tabela, utilizamos a querie:
 
-    UPDATE <table_name> SET <table_name=new_value>, ... WHERE <condition>;
+    UPDATE <table_name> SET <column_name=new_value>, ... WHERE <condition>;
 
-Obs.: Lembre-se de utilizar o WHERE, mesmo que não obrigatório.
+Obs.: Lembre-se de utilizar o WHERE, mesmo que não seja obrigatório.
 
---------------- // ---------------
 
-Deletar dados
+--------------- Deletar dados ---------------
 
 Para deletarmos dados da tabela, utilizamos a querie:
 
-DELTE FROM <table_name> WHERE <condition>;
+DELETE FROM <table_name> WHERE <condition>;
 
 Obs.: Lembre-se de utilizar o WHERE, mesmo que não obrigatório.

@@ -1,0 +1,9 @@
+O delimitar padrão utilizado é ';'. Ele indica o final da query, para que então, seja executada. Para alterarmso o delimitador, basta usarmos a palavra-chave DELIMETER. Ex.:
+
+    DELIMITER //
+    USE database//
+    SELECT * FROM table_name//
+
+Dessa forma, passamos a utilizar o delimitador como '//'.
+
+Obs.: Com as Stored Procedures, delimitadores comuns de serem utilizados são '//' ou '$$'

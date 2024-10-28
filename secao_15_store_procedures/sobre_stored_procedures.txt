@@ -1,0 +1,5 @@
+Store Procedures são querie que podem ser reutilizadas, se assemelhando muito as famosas funções na programação.
+
+Outra grande vantagem das Store Procedures é o fato de aceitaram parâmetros, adicionando dinamismo em sua utilização.
+
+Junto de seu uso, há a necessidade do uso de DELIMETERS, onde conseguimos delimitar quando a procedure se inicia e finaliza.

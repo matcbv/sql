@@ -41,6 +41,8 @@ connection.query('SELECT * FROM contas', (error, result) => {
 
 // ---------- execute() ----------
 
+// Parecido com query(), o execute() também é responsável por realizar consultas ao banco de dados, porém sendo mais indicado para consultas parametrizadas, sendo mais seguro contra injeções SQL.
+
 const id = 1;
 
 connection.execute('SELECT nome FROM contas WHERE id = ?', [id], (error, result) => {
@@ -73,9 +75,13 @@ fetchData();
 
 // ---------- end() e release() ----------
 
-// Com end, conseguimos encerrar uma conexão ativa com o banco de dados. Devemos utilizá-la após uma operação através do método createConnection().
+// Com end, conseguimos encerrar uma conexão ativa com o banco de dados, precisando criar uma nova no caso de realizarmos novas consultas. Ideal para momentos em que o programa será encerrado ou quando não será necessário realizar novas consultas por um período considerável de tempo.
 
 // Já com createPool(), utilizaremos o método release(), responsável por liberar uma conexão para o pool de conexões disponíveis do banco de dados.
+
+// ---------- getConnection() ----------
+
+// Com getConnection(), obtemos uma conexão específica a partir de um pool de conexões. Diferente do pool.query ou pool.execute, que automaticamente pegam e liberam uma conexão para consultas simples, getConnection permite que você trabalhe diretamente com uma conexão única e persistente durante várias operações.
 
 // ---------- Exemplo de consulta com poolConnection ----------
 
@@ -83,9 +89,8 @@ poolConnection.getConnection((err, connection) => {
     if(err){
         console.log('Erro ao obter conexão com o pool do banco de dados', err);
     } else{
-        const result = connection.query('SELECT nome FROM contas WHERE saldo >= 2000');
-        console.log(result);
-        connection.release();
-    }
+        connection.execute('INSERT INTO contas(saldo) VALUES (2000) WHERE ID = ?;', [id]);
+        const updatedData = connection.execute('SELECT * FROM contas WHERE ID = ?;', [id]);
+        connection.release(); // Liberando a conexão reservada para nossas consultas.
+    };
 });
-

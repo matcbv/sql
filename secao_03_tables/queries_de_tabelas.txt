@@ -1,3 +1,4 @@
+
 Podemos selecionar todos os dados de uma tabela com a querie:
 
     USE <database_name>;
@@ -27,9 +28,8 @@ Podemos inserir dados em colunas de nossa tabela com a querie:
 
 Obs.: Valores de texto são inseridos com aspas, assim como em demais linguagem de programção.
 
---------------- // ---------------
 
-Alterando tabelas
+--------------- Alterando tabelas ---------------
 
 Há três formas de alterarmos uma tabela:
 
