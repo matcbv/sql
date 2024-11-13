@@ -1,9 +1,11 @@
-Joins
+------------ Sobre ------------
 
 Joins são consultas que abrangem mais de uma tabela, onde na maioria das vezes, possuem ligações entre si. Como resultado, obtemos consultas mais completas, sendo de grande importância em diversos casos.
 
 
-INNER JOIN - Combina as linhas que têm correspondências em ambas as tabelas. Se não houver correspondência, a linha é excluída do resultado. Ex.:
+------------ INNER JOIN ------------
+
+Combina as linhas que têm correspondências em ambas as tabelas. Se não houver correspondência, a linha é excluída do resultado. Ex.:
 
     SELECT <primary_table_name>.<column_name> <stranger_table>.<column_name>
     FROM <primary_table>
@@ -15,7 +17,9 @@ A coluna que iremos utilizar no FROM será nossa tabela que contém os registros
 Obs.: Ao utilizar somente JOIN, o MySQL interpretará com um INNER JOIN.
 
 
-LEFT JOIN - Retorna todos as linhas da tabela da esquerda (primeira tabela), mesmo que não haja correspondência na tabela da direita.
+------------ LEFT JOIN ------------
+
+Retorna todos as linhas da tabela da esquerda (primeira tabela), mesmo que não haja correspondência na tabela da direita.
 
     SELECT <first_table>.<column_name>, <second_table>.<column_name>
     FROM <first_table>
@@ -23,7 +27,9 @@ LEFT JOIN - Retorna todos as linhas da tabela da esquerda (primeira tabela), mes
     ON <first_table>.<primary_key> = <second_table>.<stranger_key>;
 
 
-RIGHT JOIN - Retorna todos as linhas da tabela da direita (segunda tabela), mesmo que não haja correspondência na tabela da direita.
+------------ RIGHT JOIN ------------
+
+Retorna todos as linhas da tabela da direita (segunda tabela), mesmo que não haja correspondência na tabela da direita.
 
     SELECT <first_table>.<column_name>, <second_table>.<column_name>
     FROM <first_table>
@@ -32,6 +38,8 @@ RIGHT JOIN - Retorna todos as linhas da tabela da direita (segunda tabela), mesm
 
 Obs.: Com INNER JOIN e LEFT JOIN, as linhas sem valor serão retornada como NULL.
 
+
+------------ CONCATENAÇÃO DE JOINS ------------
 
 Para utilizarmos mais de uma tabela no JOIN, basta utilizarmos JOIN's concatenados em nossa querie. Ex.:
 

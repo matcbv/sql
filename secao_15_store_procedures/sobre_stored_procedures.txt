@@ -1,4 +1,4 @@
-Store Procedures são querie que podem ser reutilizadas, se assemelhando muito as famosas funções na programação.
+Store Procedures são queries que podem ser reutilizadas, se assemelhando muito as famosas funções na programação.
 
 Outra grande vantagem das Store Procedures é o fato de aceitaram parâmetros, adicionando dinamismo em sua utilização.
 

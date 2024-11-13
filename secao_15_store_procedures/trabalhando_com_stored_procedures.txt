@@ -23,7 +23,7 @@ Obs.: O fato de mudarmos o delimitador é devido a querie sendo salva. Caso o de
 
 --------------- Criando uma procedure parametrizada ---------------
 
-Para criarmos uma procedure com parametrizada, devemos informar os parâmetros a serem utilizados em sua criação. Ex.:
+Para criarmos uma procedure parametrizada, devemos informar os parâmetros a serem utilizados em sua criação. Ex.:
 
     DELIMITER $$
     CREATE PROCEDURE procedureName(

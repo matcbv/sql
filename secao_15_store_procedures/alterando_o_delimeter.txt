@@ -1,4 +1,4 @@
-O delimitar padrão utilizado é ';'. Ele indica o final da query, para que então, seja executada. Para alterarmso o delimitador, basta usarmos a palavra-chave DELIMETER. Ex.:
+O delimitar padrão utilizado é ';'. Ele indica o final da query, para que então, seja executada. Para alterarmos o delimitador, basta usarmos a palavra-chave DELIMETER. Ex.:
 
     DELIMITER //
     USE database//
