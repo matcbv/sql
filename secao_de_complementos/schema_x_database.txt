@@ -1,0 +1,15 @@
+----------- Banco de Dados (Database) -----------
+
+Um banco de dados é uma coleção organizada de dados armazenados e gerenciados em um sistema, como MySQL, MariaDB, ou PostgreSQL. Ele inclui todas as tabelas, estruturas de dados, procedimentos armazenados, funções, e informações relacionadas a um conjunto de dados. Um banco de dados pode ser visto como um container completo que mantém todos os dados e suas relações.
+
+
+----------- Schema -----------
+
+Um schema, dentro do contexto de um banco de dados relacional, é uma estrutura que define a organização do banco de dados em termos de tabelas, colunas, tipos de dados, e as relações entre as tabelas. Pense no schema como o "esqueleto" que descreve como os dados são armazenados no banco de dados. Dependendo do sistema de banco de dados que você está usando:
+
+
+----------- Conclusões -----------
+
+No MySQL e MariaDB, um schema e um banco de dados são quase sinônimos; criar um schema é como criar um banco de dados.
+
+Em outros sistemas, como o PostgreSQL, um banco de dados pode conter vários schemas. Nele, um schema é como um "espaço" dentro do banco de dados que agrupa tabelas, funções, e outros objetos de forma organizada.

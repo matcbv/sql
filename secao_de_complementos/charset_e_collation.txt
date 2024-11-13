@@ -1,0 +1,11 @@
+----------- charset -----------
+
+O charset define quais caracteres podem ser armazenados e manipulados em um banco de dados ou aplicação, junto com a representação de cada caractere em formato binário.
+
+Ao criarmos um banco de dados sem especificar o charset, será utilizada o utf8mb4.
+
+----------- collation -----------
+
+Uma collation refere-se ao conjunto de regras que define como os caracteres são comparados e ordenados em uma tabela. Em outras palavras, ela especifica como o MySQL realiza comparações de strings (por exemplo, em operações de ordenação ou quando você faz buscas por strings).
+
+Ao criarmos um banco de dados sem especificar uma collation, será utilizada a utf8mb4_0900_ai_ci (a partir do MySQL 8.0). Se você estiver usando uma versão mais antiga, a collation padrão pode ser utf8mb4_general_ci.

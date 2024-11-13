@@ -5,6 +5,8 @@
 
 ------------ Nomeclaturas ------------
 
+-- Abaixo, estaremos vendo cada uma das opções de integridade referencial. Usaremos de exemplo a relação entre duas tabelas representando clientes e seus respectivos pedidos.
+
 ------------ CASCADE ------------
 
 -- Com a opção CASCADE, os registros relacionados a um registro principal também são afetados por ações como DELETE e UPDATE. Ex.:
@@ -55,3 +57,6 @@
 
 ------------ NO ACTION ------------
 
+-- A opção NO ACTION é parecida com RESTRICT, mas com uma pequena diferença de comportamento, com NO ACTION a verificação de integridade referencial é adiada até o final da transação. Já RESTRICT faz essa verificação imediatamente, no momento em que a tentativa de exclusão ou atualização é feita.
+
+-- No MySQL, o comportamento entre NO ACTION e RESTRICT é quase idêntico, pois ambos irão impedir a exclusão de um registro com dependências.
