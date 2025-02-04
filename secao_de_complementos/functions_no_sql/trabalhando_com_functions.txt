@@ -1,0 +1,33 @@
+Uma função armazenada no MySQL é um bloco de código SQL reutilizável que aceita parâmetros de entrada, executa operações e retorna um único valor. É muito útil para cálculos, manipulação de dados e automação de tarefas repetitivas.
+
+--------------- Palavras-chave para functions ---------------
+
+- RETURNS: Define o tipo de dado que a função retorna (ex: INT, DECIMAL, VARCHAR, etc.).
+- DETERMINISTIC: A função sempre retorna o mesmo resultado para os mesmos parâmetros.
+- NOT DETERMINISTIC: A função pode retornar resultados diferentes, mesmo com os mesmos parâmetros.
+- RETURN: O valor que será devolvido pela função.
+
+
+--------------- Criando uma função ---------------
+
+    DELIMITER //
+    CREATE FUNCTION random_func(param param_type) -- O nome da função junto dos parâmetros e seus tipos
+    RETURNS param_type
+    DETERMINISTIC
+    BEGIN
+        RETURN query; -- Query contendo o retorno de nossa função
+    END//
+
+
+--------------- Usando uma função ---------------
+
+Para utilizarmos uma função, basta chamarmos ela diretamente em nossas queries, assim como estamos acostumados em demais linguagens. Ex.:
+
+    SELECT random_func(value);
+
+
+--------------- Deletando uma função ---------------
+
+O MySQL não permite alterar funções diretamente, logo, devemos apagá-la e recriá-la. Ex.:
+
+    DROP FUNCTION IF EXISTS calcular_imposto;

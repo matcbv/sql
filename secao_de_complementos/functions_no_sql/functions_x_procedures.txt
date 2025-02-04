@@ -1,0 +1,3 @@
+Ao trabalharmos com funções, elas irão sempre retornar um único valor, podendo ser utilizadas junto de queries com SELECT, WHERE, HAVING, etc. Seus parâmetros só podem ser do tipo IN.
+
+Já as procedures, irão retornar mútiplos valores, ou até mesmo tabelas, e não podem ser utilizadas dentro de demais queries.
