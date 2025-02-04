@@ -8,7 +8,7 @@ Já para excluí-los, usaremos a querie:
     DROP DATABASE <database_name>;
 
 
-Podemos obter informações sobre os banco de dados em nosso sistema com:
+Podemos verificar os bancos de dados em nosso sistema com:
 
     SHOW DATABASES;
 

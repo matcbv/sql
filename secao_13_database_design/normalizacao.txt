@@ -6,4 +6,4 @@ A normalização é uma série de regras a serem aplicadas em nosso banco de dad
 
 - 2FN: Colunas que não pertencem ao tópico da tabela devem ser inseridos em uma nova tabela.
 
-- 3FN: As tabelas devem conter apenas dados independentes, ou seja, cujo resultado não dependa de nenhum outro. Caso contrário, devemos tratar tais dados em outra camadas da nossa aplicação.
+- 3FN: As tabelas devem conter apenas dados independentes, ou seja, cujo resultado não dependa de nenhum outro. Caso contrário, devemos tratar tais dados em outras camadas da nossa aplicação.

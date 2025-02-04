@@ -8,12 +8,12 @@ SQL x MySQL
 SQL é a linguagem e MysQL é o SGBD (Sistema Gerenciador de Bando de dados). Logo, MySQL é um software que gerencia nossos bancos de dados, enquanto SQL é a linguagem que vamos utilizar para manipular e criar os bancos.
 
 
-O que é um bando de dados?
+O que é um banco de dados?
 
-Bancos de dados é o local onde vamos armazenar os dados de nossa aplicação. Eles serão criados a partir da SQL, onde o MySQL nos auxiliará em seu gerenciamento. Um bando de dados possui entidades vitais paras eu funcionamento, como as tabelas, que são responsáveis por manter e organizar os dados.
+Banco de dados é o local onde vamos armazenar os dados de nossa aplicação. Eles serão criados a partir da SQL, onde o MySQL nos auxiliará em seu gerenciamento. Um bando de dados possui entidades vitais paras eu funcionamento, como as tabelas, que são responsáveis por manter e organizar os dados.
 
 
-Principais elementos de um bando de dados?
+Principais elementos de um banco de dados?
 
 - Diagrama do Banco: Projeto do banco de dados, uma forma de documentação detalhando as partes fundamentais para seu funcionamento.
 - Banco de dados: A entidade que guardará todos os elementos do banco.

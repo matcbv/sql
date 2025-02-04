@@ -1,8 +1,8 @@
-One to One - Com esse relacionamento, teremos apenas um registro ligado a outro. Isso ocorre quando uma table possui um único relacionamento com outra. Ex.:
+One to One - Com esse relacionamento, teremos apenas um registro ligado a outro. Isso ocorre quando uma tabela possui um único relacionamento com outra. Ex.:
 
 Ao simular um banco de dados de uma empresa, teremos uma tabela para funcionários e uma para seus dados. Cada funcionário terá dados exclusivos, assim como os dados pertencem a um único funcionário.
 
-One to Many - Com esse relacionamento, teremos um registro ligados as vários outros. Isso ocorre quando uma tabela possui mais de um relacionamento com outra, mas não o inverso. Ex.:
+One to Many - Com esse relacionamento, teremos um registro ligados a vários outros. Isso ocorre quando uma tabela possui mais de um relacionamento com outra, mas não o inverso. Ex.:
 
 Ao simular um banco de dados de um e-commerce, teremos uma tabela para os clintes e uma para os pedidos. Um cliente pode possuir vários pedidos, mas um pedido pertence a somente um cliente.
 
@@ -20,4 +20,4 @@ Tabela pivô:
         FOREIGN KEY (<second_id>) REFERENCES <second_table>(id)
     );
 
-Obs.: Definimos os ID's como chaves primárias compostas para que não hajam pares de chaves repetidos.
+Obs.: Definimos nossa chave primária composta através das colunas first_id e second_id, garantindo que não hajam pares de chaves repetidos. As chaves primárias compostas são utilizadas quando nenhuma coluna sozinha pode identificar unicamente uma linha, mas a combinação de várias colunas pode.

@@ -1,13 +1,13 @@
-
 Podemos selecionar todos os dados de uma tabela com a querie:
 
     USE <database_name>;
 
     SELECT * FROM <table_name>;
 
-Obs.: Também podemos especificar o banco de dados em que a tabela pertence através da notação de ponto:
+Obs.: Também podemos especificar o banco de dados em que a tabela pertence através da notação de ponto. Ex.:
 
     SELECT * FROM <database_name>.<table_name>;
+
 
 
 Para criarmos uma tabela, utilizamos a querie a seguir:
@@ -17,9 +17,17 @@ Para criarmos uma tabela, utilizamos a querie a seguir:
 Obs.: Podemos criar mais de uma coluna separando-as por vírgulas em nossa querie.
 
 
+
+Para renomearmos uma tabela, utilizamos a querie:
+
+    RENAME TABLE <table_name> TO <new_table_name>;
+
+
+
 Para excluiros uma tabela, utilizamos a mesma querie vista anteriormente com o banco de dados:
 
     DROP TABLE <table_name>;
+
 
 
 Podemos inserir dados em colunas de nossa tabela com a querie:
@@ -29,7 +37,7 @@ Podemos inserir dados em colunas de nossa tabela com a querie:
 Obs.: Valores de texto são inseridos com aspas, assim como em demais linguagem de programção.
 
 
---------------- Alterando tabelas ---------------
+--------------- Trabalhando com colunas ---------------
 
 Há três formas de alterarmos uma tabela:
 
@@ -41,14 +49,19 @@ Adicionando colunas:
 
     ALTER TABLE <table_name> ADD COLUMN <column_name> <data_type>;
 
+
 Removendo colunas:
 
     ALTER TABLE <table_name> DROP COLUMN <column_name>;
 
-Modificando o tipo da coluna:
 
-    ALTER TABLE <table_name> MODIFY COLUMN <column_name> <new_data_type>;
+Modificando o tipo da coluna e/ou seus atributos:
 
-Também podemos alterar o nome da coluna junto de seu tipo. Para isso utilizaremos a querie:
+    ALTER TABLE <table_name> MODIFY COLUMN <column_name> <new_data_type> [attributes];
 
-    ALTER TABLE <table_name> CHANGE COLUMN <column_name> <new_column_name> <new_data_type>;
+
+Também podemos alterar o nome da coluna junto de seu tipo e/ou seus atributos. Para isso utilizaremos a querie:
+
+    ALTER TABLE <table_name> CHANGE COLUMN <column_name> <new_column_name> <new_data_type> [attributes];
+
+Obs.: Ao trocarmos o nome de uma coluna, é obrigatório informarmos o tipo dela novamente.

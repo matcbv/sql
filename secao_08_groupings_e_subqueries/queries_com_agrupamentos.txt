@@ -16,12 +16,12 @@ UNION ALL - Com UNION ALL, obtemos um agrupamento entre duas colunas, porém man
 
 GROUP BY - Com GROUP BY, conseguimos dividir os resultados em grupos para que funções de agregação, como COUNT, SUM ou AVG, sejam aplicadas de forma grupal ao invés de global.
     
-    SELECT <column_name> COUNT(<column_name>) FROM <table_name> GROUP BY <column_name>;
+    SELECT <column_name>, COUNT(<column_name>) FROM <table_name> GROUP BY <column_name>;
 
 
 HAVING - Com HAVING, realizmos a mesma filtragem realizada com o WHERE, mas esse, é utilizado com o resultado de funções agregadas. Ex.:
 
-    SELECT <column_name> COUNT(<column_name>) FROM <table_name>
+    SELECT <column_name>, COUNT(<column_name>) FROM <table_name>
     GROUP BY <column_name>
     HAVING <condition>;
 
@@ -34,7 +34,7 @@ EXISTS - Com EXISTS, conseguimos validar se certa subquerie é válida, ou seja,
 Obs.: Com SELECT 1, estaremos indicando ao SQL que não há necessidade de buscar todas as colunas da tabela. O banco de dados pode simplesmente verificar se existem linhas que atendem à condição e retornar 1 como um placeholder.
 
 
-ANY - Sendo muito semelhante ao EXISTS, o ANY verifica se algum valor da subconsulta corresponde à condição da comparação com o WHERE. Ex.:
+ANY - Sendo muito semelhante ao EXISTS, o ANY verifica se a condição é verdadeira para pelo menos um dos valores retornados pela subquery, levando em conta a condição da comparação com o WHERE. Ex.:
 
     SELECT <column_name> FROM <table_name>
     WHERE <value> =/>/< ANY (SELECT <column_name> FROM <table_name>)

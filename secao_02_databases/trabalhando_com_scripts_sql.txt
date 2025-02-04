@@ -1,6 +1,6 @@
 Podemos rodar scripts SQL externos com o comando:
 
-    source database_file.sql
+    mysql -u root < <file_name>.sql
 
 
 Para importarmos dados diretamente em nossa interface gráfica em:

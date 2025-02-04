@@ -1,7 +1,0 @@
-Operadores
-
-% (Porcentagem) - Com %, conseguimos definir um padrão a ser seguida para busca de dados com nosso SELECT. São muito utilizados em queries com LIKE. Ex.:
-
-    SELECT * FROM <table_name> WHERE <table_name> LIKE "%string%"
-
-    No exemplo acima, serão retornados todos os dados que contenham determinada string em seu conteúdo. Podemos selecionar as que começam ou terminam com tal string, inserindo % apenas no final, ou início, respectivamente.

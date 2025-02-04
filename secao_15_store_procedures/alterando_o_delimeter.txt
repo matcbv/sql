@@ -6,4 +6,4 @@ O delimitar padrão utilizado é ';'. Ele indica o final da query, para que ent�
 
 Dessa forma, passamos a utilizar o delimitador como '//'.
 
-Obs.: Com as Stored Procedures, delimitadores comuns de serem utilizados são '//' ou '$$'
+Obs.: Com as Stored Procedures, delimitadores comuns de serem utilizados são '//' ou '$$'.

@@ -17,11 +17,11 @@ UNIQUE - Faz com que os valores de determinada coluna sejam únicos. Ex.:
 
 PRIMARY KEY - Faz com que determinada coluna contenha os ID's de determinada tabela.
 
-	CREATE TABLE <table_name> (id INT PRIMARY KEY) VALUES (<value>);
+	CREATE TABLE <table_name> (id INT PRIMARY KEY, ...) VALUES (<value>);
 
 	Outra opção é:
 
-	CREATE TABLE <table_name> (id INT, <column_name> <data_type>, PRIMARY KEY (id)) VALUES (<value>);
+	CREATE TABLE <table_name> (id INT, ..., PRIMARY KEY (id)) VALUES (<value>);
 
 	Obs.: A coluna de ID não aceita valores nulos ou duplicados.
 

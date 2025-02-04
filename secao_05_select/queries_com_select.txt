@@ -8,6 +8,7 @@ Operadores de comparação:
 - >= (Maior ou igual)
 - <= (Menor ou igual)
 - = (Igual)
+- % (Padrão)
 
 --------------- // ---------------
 
@@ -38,9 +39,19 @@ BETWEEN: Retorna valores contidos em determinado intervalo. Ex.:
     SELECT * FROM <table_name> WHERE <column_name> BETWEEN <value> AND <value>;
 
 
-LIKE: Retorna valores contidos em determinado padrão. Ex.:
+
+LIKE: Retorna valores contidos em determinado padrão.
+
+Ex.:
 
     SELECT * FROM <table_name> WHERE <column_name> LIKE <value>;
+
+Ex. 2:
+
+    SELECT * FROM <table_name> WHERE <column_name> LIKE '%value';
+
+Obs.: Com %, conseguimos definir um padrão a ser seguido para busca de dados com SELECT, sendo muito utilizados em queries com LIKE. No exemplo acima, serão retornados todos os dados que contenham determinada string em seu conteúdo. Podemos selecionar as que começam ou terminam com tal string, inserindo % apenas no final, ou início, respectivamente.
+
 
 
 IN: Retorna valores contidos em uma lista de valores. Ex.:
@@ -48,9 +59,11 @@ IN: Retorna valores contidos em uma lista de valores. Ex.:
     SELECT * FROM <table_name> WHERE <column_name> IN (<value1>, <value2>, ...);
 
 
+
 DISTINCT: Retorna apenas valores únicos em uma consulta, elimindando todas as duplicatas.
 
     SELECT * FROM <table_name> WHERE <column_name> DISTINCT;
+
 
 
 ORDER BY: Ordena valores de acordo com colunas em forma ascendente (ASC) ou descendente (DESC). Ex.:
@@ -58,6 +71,7 @@ ORDER BY: Ordena valores de acordo com colunas em forma ascendente (ASC) ou desc
     SELECT * FROM <table_name> ORDER BY <column_name> DESC;
 
 Obs.: Por padrão, a ordenação é feita de forma ascendente.
+
 
 
 LIMIT: Limita o número de resultados em determinado inteiro. Ex.:

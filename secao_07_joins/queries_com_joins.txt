@@ -19,7 +19,7 @@ Obs.: Ao utilizar somente JOIN, o MySQL interpretará com um INNER JOIN.
 
 ------------ LEFT JOIN ------------
 
-Retorna todos as linhas da tabela da esquerda (primeira tabela), mesmo que não haja correspondência na tabela da direita.
+Retorna todas as linhas da tabela da esquerda (primeira tabela). Se houver correspondência na tabela da direita (segunda tabela), os dados são combinados, caso contrário, os campos da tabela da direita aparecem como NULL.
 
     SELECT <first_table>.<column_name>, <second_table>.<column_name>
     FROM <first_table>
@@ -29,7 +29,7 @@ Retorna todos as linhas da tabela da esquerda (primeira tabela), mesmo que não 
 
 ------------ RIGHT JOIN ------------
 
-Retorna todos as linhas da tabela da direita (segunda tabela), mesmo que não haja correspondência na tabela da direita.
+Retorna todas as linhas da tabela da direita (segunda tabela). Se houver correspondência na tabela da esquerda (primeira tabela), os dados são combinados, caso contrário, os campos da tabela da esquerda aparecem como NULL.
 
     SELECT <first_table>.<column_name>, <second_table>.<column_name>
     FROM <first_table>

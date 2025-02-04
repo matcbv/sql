@@ -1,3 +1,8 @@
+Store Procedures são queries que podem ser reutilizadas, se assemelhando muito as famosas funções na programação. A grande vantagem das Store Procedures é o fato de aceitaram parâmetros, adicionando dinamismo em sua utilização.
+
+Junto de seu uso, há a necessidade do uso de DELIMETERS, onde conseguimos delimitar quando a procedure se inicia e finaliza.
+
+
 --------------- Palavras-chave para procedures ---------------
 
 - CREATE PROCEDURE: Responsável pro criar uma procedure ao passarmos o nome dela junto de seus parâmetros, caso existentes.
@@ -8,15 +13,16 @@
 - END: Indica o final da store procedure.
 - CALL: Responsável por chamar nossa store procedure para uso.
 
+
 --------------- Criando uma procedure ---------------
 
 Para criarmos uma procedure, devemos iniciar e finalizar nossa querie com as palavras-chave BEGIN e END, respectivamente. Ex.:
 
-    DELIMITER $$
-    CREATE PROCEDURE procedureName() // O nome da procedure (Camel Case por padrão), junto dos parâmetros a serem utilizados, caso existentes.
+    DELIMITER //
+    CREATE PROCEDURE procedureName() -- O nome da procedure (Camel Case por padrão), junto dos parâmetros a serem utilizados, caso existentes.
     BEGIN
-        QUERY; // A query a ser salva na procedure.
-    END$$
+        QUERY; -- A query a ser salva na procedure.
+    END//
 
 Obs.: O fato de mudarmos o delimitador é devido a querie sendo salva. Caso o delimitador seja o mesmo, a querie seria executada antes do fim da procedure.
 
@@ -45,10 +51,11 @@ Para que todas as procedures criadas sejam exibidas, utilizamos a querie:
 
     SHOW PROCEDURE STATUS
 
-Também podemos filtras as procedures criadas para um banco de dados em específico:
+Também podemos filtrar as procedures criadas para um banco de dados em específico:
 
     SHOW PROCEDURE STATUS WHERE Db = 'database_name'
 
+Obs.: Db é o nome da coluna que armazena o nome dos bancos de dados na saída da querie SHOW PROCEDURE STATUS;
 
 --------------- Deletar procedures ---------------
 
