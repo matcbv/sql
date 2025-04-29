@@ -14,20 +14,23 @@
 -- Clientes: 
 
     CREATE TABLE clientes (
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL, sobrenome VARCHAR(100) NOT NULL,
-    telefone VARCHAR(100) NOT NULL,
-    endereco VARCHAR(250) NOT NULL
+        id INT AUTO_INCREMENT,
+        nome VARCHAR(100) NOT NULL,
+        sobrenome VARCHAR(100) NOT NULL,
+        telefone VARCHAR(100) NOT NULL,
+        endereco VARCHAR(250) NOT NULL,
+        PRIMARY KEY(id)
     );
 
 -- Pedidos:
 
     CREATE TABLE pedidos (
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    id_cliente INT NOT NULL,
-    produto VARCHAR(250) NOT NULL,
-    preco FLOAT NOT NULL,
-    FOREIGN KEY (id_cliente) REFERENCES clientes(id) ON DELETE CASCADE
+        id INT AUTO_INCREMENT,
+        id_cliente INT NOT NULL,
+        produto VARCHAR(250) NOT NULL,
+        preco FLOAT NOT NULL,
+        PRIMARY KEY(id),
+        FOREIGN KEY (id_cliente) REFERENCES clientes(id) ON DELETE CASCADE
     );
 
 ------------ RESTRICT ------------
@@ -37,26 +40,28 @@
 -- Clientes: 
 
     CREATE TABLE clientes (
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL, sobrenome VARCHAR(100) NOT NULL,
-    telefone VARCHAR(100) NOT NULL,
-    endereco VARCHAR(250) NOT NULL
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        nome VARCHAR(100) NOT NULL, sobrenome VARCHAR(100) NOT NULL,
+        telefone VARCHAR(100) NOT NULL,
+        endereco VARCHAR(250) NOT NULL
     );
 
 -- Pedidos:
 
     CREATE TABLE pedidos (
-    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    id_cliente INT NOT NULL,
-    produto VARCHAR(250) NOT NULL,
-    preco FLOAT NOT NULL,
-    FOREIGN KEY (id_cliente) REFERENCES clientes(id) ON DELETE RESTRICT
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        id_cliente INT NOT NULL,
+        produto VARCHAR(250) NOT NULL,
+        preco FLOAT NOT NULL,
+        FOREIGN KEY (id_cliente) REFERENCES clientes(id) ON DELETE RESTRICT
     );
 
 -- Obs.: O RESTRICT é aplicado por padrão em muitos bancos de dados, como no MySQL Workbench, então você pode omitir ON DELETE RESTRICT se desejar.
 
 ------------ NO ACTION ------------
 
--- A opção NO ACTION é parecida com RESTRICT, mas com uma pequena diferença de comportamento, com NO ACTION a verificação de integridade referencial é adiada até o final da transação. Já RESTRICT faz essa verificação imediatamente, no momento em que a tentativa de exclusão ou atualização é feita.
-
--- No MySQL, o comportamento entre NO ACTION e RESTRICT é quase idêntico, pois ambos irão impedir a exclusão de um registro com dependências.
+/*
+    A opção NO ACTION é parecida com RESTRICT, mas com uma pequena diferença de comportamento, com NO ACTION a verificação de integridade referencial é adiada até o final da transação. Já RESTRICT faz essa verificação imediatamente, no momento em que a tentativa de exclusão ou atualização é feita.
+    
+    No MySQL, o comportamento entre NO ACTION e RESTRICT é quase idêntico, pois ambos irão impedir a exclusão de um registro com dependências.
+*/
